@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package api;
+
+message Product {
+    required string name = 1;
+    required int32 id = 2;
+    required string company = 3;
+    optional int32 kcal = 4;
+}
+
+
+
