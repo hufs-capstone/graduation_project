@@ -7,8 +7,13 @@ function App() {
 
   useEffect(()=> {
     fetch('/time').then(res=> res.json()).then(data=>{
+        console.log(data);
       setCurrentTime(data.time);
     });
+    fetch('/product').then(res=>
+            {
+                console.log(res.json());
+            });
   }, []);
   return (
     <div className="App">
@@ -26,6 +31,7 @@ function App() {
           Learn React
         </a>
         <p>The current time is{current_time}</p>
+        <p>product</p>
       </header>
     </div>
   );
