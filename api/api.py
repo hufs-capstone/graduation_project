@@ -23,3 +23,15 @@ def get_product():
     product.company = "lotte"
     product.kcal = 300
     return MessageToJson(product)
+
+@app.route('/user_info', methods=['GET'])
+def get_user_info():
+    user_info = pb.UserInfo()
+    user_info.age = 10;
+    user_info.sex = "male"
+    user_info.section = pb.S9_11
+    return user_info.SerializeToString()
+    #return MessageToJson(user_info)
+
+
+    
