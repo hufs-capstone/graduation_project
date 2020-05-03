@@ -2,6 +2,39 @@ syntax = "proto2";
 
 package api;
 
+enum SectionType {
+    S = 0;
+    S1_2 = 1;
+    S3_5 = 3;
+    S6_8 = 4;
+    S9_11 = 5;
+    S12_14 = 6;
+    S15_18 = 7;
+    S19_29 = 8;
+    S30_49 = 9;
+    S50_64 = 10;
+    S65_74 = 11;
+    S75 = 12;
+}
+message TableForm {
+    required string sex = 1;
+    required string age = 2;
+    required SectionType section = 3;
+    required float kcal = 4;
+    required float protein = 5;
+    required float fat = 6;
+    required float carbs = 7;
+    required float sugar = 8;
+    required float na = 9;
+    required float chol = 10;
+}
+
+message UserInfo {
+    required int32 age = 1;
+    required string sex = 2;
+    required SectionType section = 3;
+}
+
 message Product {
     required string name = 1;
     required int32 id = 2;
