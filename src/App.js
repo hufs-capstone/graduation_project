@@ -31,8 +31,12 @@ const App = (
           <div>
             <Switch>
               
+              <Route exact path = "/" component={Home}/>
               <Route path = "/cal1" component={cal1}/>
-              
+              <Route path = "/cal2" component={cal2}/>
+              <Route path = "/commu" component={commu}/>
+              <Route path = "/comp" component={comp}/>
+
             </Switch>
           </div>
         </Router>

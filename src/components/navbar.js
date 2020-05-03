@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../image/yamyamlogo.png';
 import {
     Collapse,
     Navbar,
@@ -13,6 +14,7 @@ import {
     DropdownItem,
     NavbarText
   } from 'reactstrap';
+
   const AppNavbar =  () => {
     const [isOpen, setIsOpen] = useState(false);
   
@@ -24,7 +26,7 @@ import {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">메뉴선택</NavbarBrand>
+          <NavbarBrand href="/"><img src={logo} style={{width:100, marginTop: 0}}/></NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -34,19 +36,19 @@ import {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    맞춤 계산기
+                  <NavLink href="/cal1">맞춤 계산기</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    제품 선택 계산기
+                  <NavLink href="/cal2">제품 선택 계산기</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    제품 비교
+                  <NavLink href="/comp">제품 비교</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink href="/components/">커뮤니티</NavLink>
+                <NavLink href="/commu">커뮤니티</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
