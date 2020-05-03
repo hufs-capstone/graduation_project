@@ -19,7 +19,7 @@ with open('food_list.csv', encoding='utf8') as csv_file:
         product["carbs"] = line["탄수화물"]
         product["sugar"] = line["총당류"]
         product["na"] = line["나트륨"]
-        product["col"] = line["콜레스테롤"]
+        product["chol"] = line["콜레스테롤"]
         products.insert_one(product)
         print(product["name"])
 
