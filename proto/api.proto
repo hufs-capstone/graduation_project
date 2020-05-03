@@ -39,7 +39,13 @@ message Product {
     required string name = 1;
     required int32 id = 2;
     required string company = 3;
-    optional int32 kcal = 4;
+    required float kcal = 4;
+    required float protein = 5;
+    required float fat = 6;
+    required float carbs = 7;
+    required float sugar = 8;
+    required float na = 9;
+    required float chol = 10;
 }
 
 
