@@ -1,4 +1,4 @@
-table = []
+table = {}
 table['male']={
 
 	"0":{"kcal":550, "protein":10, "fat":11, "carbs":57, "sugar":22, "na":160,"chol": 0},
