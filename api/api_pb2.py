@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='api',
   syntax='proto2',
   serialized_options=None,
-  serialized_pb=b'\n\tapi.proto\x12\x03\x61pi\"\xac\x01\n\tTableForm\x12\x0b\n\x03sex\x18\x01 \x02(\t\x12\x0b\n\x03\x61ge\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02\"G\n\x08UserInfo\x12\x0b\n\x03\x61ge\x18\x01 \x02(\x05\x12\x0b\n\x03sex\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\"B\n\x07Product\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ompany\x18\x03 \x02(\t\x12\x0c\n\x04kcal\x18\x04 \x01(\x05*\x8e\x01\n\x0bSectionType\x12\x05\n\x01S\x10\x00\x12\x08\n\x04S1_2\x10\x01\x12\x08\n\x04S3_5\x10\x03\x12\x08\n\x04S6_8\x10\x04\x12\t\n\x05S9_11\x10\x05\x12\n\n\x06S12_14\x10\x06\x12\n\n\x06S15_18\x10\x07\x12\n\n\x06S19_29\x10\x08\x12\n\n\x06S30_49\x10\t\x12\n\n\x06S50_64\x10\n\x12\n\n\x06S65_74\x10\x0b\x12\x07\n\x03S75\x10\x0c'
+  serialized_pb=b'\n\tapi.proto\x12\x03\x61pi\"\xac\x01\n\tTableForm\x12\x0b\n\x03sex\x18\x01 \x02(\t\x12\x0b\n\x03\x61ge\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02\"G\n\x08UserInfo\x12\x0b\n\x03\x61ge\x18\x01 \x02(\x05\x12\x0b\n\x03sex\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\"\x98\x01\n\x07Product\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ompany\x18\x03 \x02(\t\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02*\x8e\x01\n\x0bSectionType\x12\x05\n\x01S\x10\x00\x12\x08\n\x04S1_2\x10\x01\x12\x08\n\x04S3_5\x10\x03\x12\x08\n\x04S6_8\x10\x04\x12\t\n\x05S9_11\x10\x05\x12\n\n\x06S12_14\x10\x06\x12\n\n\x06S15_18\x10\x07\x12\n\n\x06S19_29\x10\x08\x12\n\n\x06S30_49\x10\t\x12\n\n\x06S50_64\x10\n\x12\n\n\x06S65_74\x10\x0b\x12\x07\n\x03S75\x10\x0c'
 )
 
 _SECTIONTYPE = _descriptor.EnumDescriptor(
@@ -79,8 +79,8 @@ _SECTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=335,
-  serialized_end=477,
+  serialized_start=422,
+  serialized_end=564,
 )
 _sym_db.RegisterEnumDescriptor(_SECTIONTYPE)
 
@@ -269,8 +269,50 @@ _PRODUCT = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='kcal', full_name='api.Product.kcal', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      number=4, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='protein', full_name='api.Product.protein', index=4,
+      number=5, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='fat', full_name='api.Product.fat', index=5,
+      number=6, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='carbs', full_name='api.Product.carbs', index=6,
+      number=7, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sugar', full_name='api.Product.sugar', index=7,
+      number=8, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='na', full_name='api.Product.na', index=8,
+      number=9, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='chol', full_name='api.Product.chol', index=9,
+      number=10, type=2, cpp_type=6, label=2,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -286,8 +328,8 @@ _PRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=266,
-  serialized_end=332,
+  serialized_start=267,
+  serialized_end=419,
 )
 
 _TABLEFORM.fields_by_name['section'].enum_type = _SECTIONTYPE
