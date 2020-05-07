@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import { Button, Container, Row, Col } from 'reactstrap';
 import{BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import Header from './components/Header';
 import Banner from './components/banner';
 import AppNavbar from './components/navbar';
+import Agesex from './components/Agesex';
 
 import './App.css';
 
@@ -24,7 +25,10 @@ const App = (
         </Row>
       </Container>
       <Container>
-      <h1>age, sex</h1>
+        <div>
+          <Agesex />
+        </div>
+      
       </Container>
       <Container>
         <Router>
