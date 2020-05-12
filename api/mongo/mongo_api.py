@@ -10,7 +10,11 @@ def get(product_name):
         products = db.products
         temp = products.find_one({"name" : product_name})
         res = pb.Product()
+        print("---mongo api---")
         pprint(temp)
+        print("---mongo api---")
+        if temp is None:
+            return None
         for key in temp.keys():
             value = temp[key]
             if(key == '_id'):
