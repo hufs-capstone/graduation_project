@@ -32,6 +32,7 @@ def products(product_name):
     product = mongo_api.get(product_name)
     if product is None:
         product = pb.Product()
+    print(product.name)
     return MessageToJson(product)
 
 @app.route('/translate', methods=['POST'])
@@ -44,8 +45,10 @@ def translate():
         print(age)
         print(sex)
         product_info = mongo_api.get(product_name)
-        ans = calculate_data.multi(age, sex, product_info)
-        return MessageToJson(ans)
+        res = pb.CompareDatas()
+        res.basic.product.CopyFrom(product_info)
+        res.translated.CopyFrom(calculate_data.multi(age, sex, product_info))
+        return MessageToJson(res)
 
 @app.route('/manualtranslate', methods=['POST'])
 def manualtranslate():
@@ -60,8 +63,11 @@ def manualtranslate():
         product_info.sugar = int(request.form['sugar'])
         product_info.na = int(request.form['na'])
         product_info.chol = int(request.form['chol'])
-        ans = calculate_data.multi(age, sex, product_info)
-        return MessageToJson(ans)
+        res = pb.CompareDatas()
+        res.basic.product.CopyFrom(product_info)
+        res.translated.CopyFrom(calculate_data.multi(age, sex, product_info))
+
+        return MessageToJson(res)
 
 @app.route('/user_info', methods=['GET'])
 def get_user_info():
