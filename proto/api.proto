@@ -44,4 +44,7 @@ message UserInfo {
     required string sex = 2;
     required SectionType section = 3;
 }
+message Products {
+    repeated Product products = 1;
+}
 
