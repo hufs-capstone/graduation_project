@@ -38,12 +38,10 @@ def products(product_name):
 @app.route('/translate', methods=['POST'])
 def translate():
     if request.method == 'POST':
-        product_name = request.form['product_name']
-        age = request.form['age']
-        sex = request.form['sex']
-        print(product_name)
-        print(age)
-        print(sex)
+        body = request.get_json()
+        product_name = body['product_name']
+        age = body['age']
+        sex = body['sex']
         product_info = mongo_api.get(product_name)
         res = pb.CompareDatas()
         res.basic.product.CopyFrom(product_info)
@@ -53,16 +51,17 @@ def translate():
 @app.route('/manualtranslate', methods=['POST'])
 def manualtranslate():
     if request.method == 'POST':
-        age = request.form['age']
-        sex = request.form['sex']
+        body = request.get_json()
+        age = body['age']
+        sex = body['sex']
         product_info = pb.Product()
-        product_info.kcal = int(request.form['kcal'])
-        product_info.protein = int(request.form['protein'])
-        product_info.fat = int(request.form['fat'])
-        product_info.carbs = int(request.form['carbs'])
-        product_info.sugar = int(request.form['sugar'])
-        product_info.na = int(request.form['na'])
-        product_info.chol = int(request.form['chol'])
+        product_info.kcal = int(body['kcal'])
+        product_info.protein = int(body['protein'])
+        product_info.fat = int(body['fat'])
+        product_info.carbs = int(body['carbs'])
+        product_info.sugar = int(body['sugar'])
+        product_info.na = int(body['na'])
+        product_info.chol = int(body['chol'])
         res = pb.CompareDatas()
         res.basic.product.CopyFrom(product_info)
         res.translated.CopyFrom(calculate_data.multi(age, sex, product_info))

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='api',
   syntax='proto2',
   serialized_options=None,
-  serialized_pb=b'\n\tapi.proto\x12\x03\x61pi\"\x98\x01\n\x07Product\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ompany\x18\x03 \x02(\t\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02\"g\n\tTableForm\x12\x0b\n\x03sex\x18\x01 \x02(\t\x12\x0b\n\x03\x61ge\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\x12\x1d\n\x07product\x18\x04 \x02(\x0b\x32\x0c.api.Product\"Q\n\x0c\x43ompareDatas\x12\x1d\n\x05\x62\x61sic\x18\x01 \x02(\x0b\x32\x0e.api.TableForm\x12\"\n\ntranslated\x18\x02 \x02(\x0b\x32\x0e.api.TableForm\"G\n\x08UserInfo\x12\x0b\n\x03\x61ge\x18\x01 \x02(\x05\x12\x0b\n\x03sex\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType*\x8e\x01\n\x0bSectionType\x12\x05\n\x01S\x10\x00\x12\x08\n\x04S1_2\x10\x01\x12\x08\n\x04S3_5\x10\x03\x12\x08\n\x04S6_8\x10\x04\x12\t\n\x05S9_11\x10\x05\x12\n\n\x06S12_14\x10\x06\x12\n\n\x06S15_18\x10\x07\x12\n\n\x06S19_29\x10\x08\x12\n\n\x06S30_49\x10\t\x12\n\n\x06S50_64\x10\n\x12\n\n\x06S65_74\x10\x0b\x12\x07\n\x03S75\x10\x0c'
+  serialized_pb=b'\n\tapi.proto\x12\x03\x61pi\"\x98\x01\n\x07Product\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ompany\x18\x03 \x02(\t\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02\"g\n\tTableForm\x12\x0b\n\x03sex\x18\x01 \x02(\t\x12\x0b\n\x03\x61ge\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\x12\x1d\n\x07product\x18\x04 \x02(\x0b\x32\x0c.api.Product\"Q\n\x0c\x43ompareDatas\x12\x1d\n\x05\x62\x61sic\x18\x01 \x02(\x0b\x32\x0e.api.TableForm\x12\"\n\ntranslated\x18\x02 \x02(\x0b\x32\x0e.api.TableForm\"G\n\x08UserInfo\x12\x0b\n\x03\x61ge\x18\x01 \x02(\x05\x12\x0b\n\x03sex\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\"*\n\x08Products\x12\x1e\n\x08products\x18\x01 \x03(\x0b\x32\x0c.api.Product*\x8e\x01\n\x0bSectionType\x12\x05\n\x01S\x10\x00\x12\x08\n\x04S1_2\x10\x01\x12\x08\n\x04S3_5\x10\x03\x12\x08\n\x04S6_8\x10\x04\x12\t\n\x05S9_11\x10\x05\x12\n\n\x06S12_14\x10\x06\x12\n\n\x06S15_18\x10\x07\x12\n\n\x06S19_29\x10\x08\x12\n\n\x06S30_49\x10\t\x12\n\n\x06S50_64\x10\n\x12\n\n\x06S65_74\x10\x0b\x12\x07\n\x03S75\x10\x0c'
 )
 
 _SECTIONTYPE = _descriptor.EnumDescriptor(
@@ -79,8 +79,8 @@ _SECTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=435,
-  serialized_end=577,
+  serialized_start=479,
+  serialized_end=621,
 )
 _sym_db.RegisterEnumDescriptor(_SECTIONTYPE)
 
@@ -328,15 +328,48 @@ _USERINFO = _descriptor.Descriptor(
   serialized_end=432,
 )
 
+
+_PRODUCTS = _descriptor.Descriptor(
+  name='Products',
+  full_name='api.Products',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='products', full_name='api.Products.products', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=434,
+  serialized_end=476,
+)
+
 _TABLEFORM.fields_by_name['section'].enum_type = _SECTIONTYPE
 _TABLEFORM.fields_by_name['product'].message_type = _PRODUCT
 _COMPAREDATAS.fields_by_name['basic'].message_type = _TABLEFORM
 _COMPAREDATAS.fields_by_name['translated'].message_type = _TABLEFORM
 _USERINFO.fields_by_name['section'].enum_type = _SECTIONTYPE
+_PRODUCTS.fields_by_name['products'].message_type = _PRODUCT
 DESCRIPTOR.message_types_by_name['Product'] = _PRODUCT
 DESCRIPTOR.message_types_by_name['TableForm'] = _TABLEFORM
 DESCRIPTOR.message_types_by_name['CompareDatas'] = _COMPAREDATAS
 DESCRIPTOR.message_types_by_name['UserInfo'] = _USERINFO
+DESCRIPTOR.message_types_by_name['Products'] = _PRODUCTS
 DESCRIPTOR.enum_types_by_name['SectionType'] = _SECTIONTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -367,6 +400,13 @@ UserInfo = _reflection.GeneratedProtocolMessageType('UserInfo', (_message.Messag
   # @@protoc_insertion_point(class_scope:api.UserInfo)
   })
 _sym_db.RegisterMessage(UserInfo)
+
+Products = _reflection.GeneratedProtocolMessageType('Products', (_message.Message,), {
+  'DESCRIPTOR' : _PRODUCTS,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:api.Products)
+  })
+_sym_db.RegisterMessage(Products)
 
 
 # @@protoc_insertion_point(module_scope)

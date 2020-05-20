@@ -31,11 +31,39 @@ def get(product_name):
         #res.name = temp['chol']
         return res
 
+def search(query, start):
+    with MongoClient() as client:
+        db = client.main_db
+        products = db.products
+        query = "\d*"+query+"\d*"
+        cursor = products.find({"name" : {"$regex": query}})[start:start+10]
+        res_products = pb.Products()
+        for line in cursor:
+            product = res_products.products.add()
+            for key in line.keys():
+                value = line[key]
+                if(key == '_id'):
+                    continue
+                if(key == 'col'):
+                    key = 'chol'
+                if value == '-':
+                    value = 0
+                if key in ['chol', 'kcal', 'protein', 'fat', 'carbs', 'sugar', 'na']:
+                    value = float(value)
+                setattr(product, key, value)
+
+        return res_products 
+
+    
+
 
 if __name__ == "__main__":
     res = get("마가렛트")
-    print (res.name)
-    print (res.carbs)
-    print (res.fat)
-    print (res.na)
+
+    res = search("파이", 11)
+
+    print(res)
+    print(res.products[0])
+    print(res.products[1])
+
 
