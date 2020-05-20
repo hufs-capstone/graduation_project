@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='api',
   syntax='proto2',
   serialized_options=None,
-  serialized_pb=b'\n\tapi.proto\x12\x03\x61pi\"\xac\x01\n\tTableForm\x12\x0b\n\x03sex\x18\x01 \x02(\t\x12\x0b\n\x03\x61ge\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02\"G\n\x08UserInfo\x12\x0b\n\x03\x61ge\x18\x01 \x02(\x05\x12\x0b\n\x03sex\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\"\x98\x01\n\x07Product\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ompany\x18\x03 \x02(\t\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02*\x8e\x01\n\x0bSectionType\x12\x05\n\x01S\x10\x00\x12\x08\n\x04S1_2\x10\x01\x12\x08\n\x04S3_5\x10\x03\x12\x08\n\x04S6_8\x10\x04\x12\t\n\x05S9_11\x10\x05\x12\n\n\x06S12_14\x10\x06\x12\n\n\x06S15_18\x10\x07\x12\n\n\x06S19_29\x10\x08\x12\n\n\x06S30_49\x10\t\x12\n\n\x06S50_64\x10\n\x12\n\n\x06S65_74\x10\x0b\x12\x07\n\x03S75\x10\x0c'
+  serialized_pb=b'\n\tapi.proto\x12\x03\x61pi\"\x98\x01\n\x07Product\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\n\n\x02id\x18\x02 \x02(\x05\x12\x0f\n\x07\x63ompany\x18\x03 \x02(\t\x12\x0c\n\x04kcal\x18\x04 \x02(\x02\x12\x0f\n\x07protein\x18\x05 \x02(\x02\x12\x0b\n\x03\x66\x61t\x18\x06 \x02(\x02\x12\r\n\x05\x63\x61rbs\x18\x07 \x02(\x02\x12\r\n\x05sugar\x18\x08 \x02(\x02\x12\n\n\x02na\x18\t \x02(\x02\x12\x0c\n\x04\x63hol\x18\n \x02(\x02\"g\n\tTableForm\x12\x0b\n\x03sex\x18\x01 \x02(\t\x12\x0b\n\x03\x61ge\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType\x12\x1d\n\x07product\x18\x04 \x02(\x0b\x32\x0c.api.Product\"Q\n\x0c\x43ompareDatas\x12\x1d\n\x05\x62\x61sic\x18\x01 \x02(\x0b\x32\x0e.api.TableForm\x12\"\n\ntranslated\x18\x02 \x02(\x0b\x32\x0e.api.TableForm\"G\n\x08UserInfo\x12\x0b\n\x03\x61ge\x18\x01 \x02(\x05\x12\x0b\n\x03sex\x18\x02 \x02(\t\x12!\n\x07section\x18\x03 \x02(\x0e\x32\x10.api.SectionType*\x8e\x01\n\x0bSectionType\x12\x05\n\x01S\x10\x00\x12\x08\n\x04S1_2\x10\x01\x12\x08\n\x04S3_5\x10\x03\x12\x08\n\x04S6_8\x10\x04\x12\t\n\x05S9_11\x10\x05\x12\n\n\x06S12_14\x10\x06\x12\n\n\x06S15_18\x10\x07\x12\n\n\x06S19_29\x10\x08\x12\n\n\x06S30_49\x10\t\x12\n\n\x06S50_64\x10\n\x12\n\n\x06S65_74\x10\x0b\x12\x07\n\x03S75\x10\x0c'
 )
 
 _SECTIONTYPE = _descriptor.EnumDescriptor(
@@ -79,8 +79,8 @@ _SECTIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=422,
-  serialized_end=564,
+  serialized_start=435,
+  serialized_end=577,
 )
 _sym_db.RegisterEnumDescriptor(_SECTIONTYPE)
 
@@ -98,145 +98,6 @@ S50_64 = 10
 S65_74 = 11
 S75 = 12
 
-
-
-_TABLEFORM = _descriptor.Descriptor(
-  name='TableForm',
-  full_name='api.TableForm',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='sex', full_name='api.TableForm.sex', index=0,
-      number=1, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='age', full_name='api.TableForm.age', index=1,
-      number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='section', full_name='api.TableForm.section', index=2,
-      number=3, type=14, cpp_type=8, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='kcal', full_name='api.TableForm.kcal', index=3,
-      number=4, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='protein', full_name='api.TableForm.protein', index=4,
-      number=5, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='fat', full_name='api.TableForm.fat', index=5,
-      number=6, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='carbs', full_name='api.TableForm.carbs', index=6,
-      number=7, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='sugar', full_name='api.TableForm.sugar', index=7,
-      number=8, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='na', full_name='api.TableForm.na', index=8,
-      number=9, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='chol', full_name='api.TableForm.chol', index=9,
-      number=10, type=2, cpp_type=6, label=2,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=19,
-  serialized_end=191,
-)
-
-
-_USERINFO = _descriptor.Descriptor(
-  name='UserInfo',
-  full_name='api.UserInfo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='age', full_name='api.UserInfo.age', index=0,
-      number=1, type=5, cpp_type=1, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='sex', full_name='api.UserInfo.sex', index=1,
-      number=2, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='section', full_name='api.UserInfo.section', index=2,
-      number=3, type=14, cpp_type=8, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=193,
-  serialized_end=264,
-)
 
 
 _PRODUCT = _descriptor.Descriptor(
@@ -328,17 +189,163 @@ _PRODUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=267,
-  serialized_end=419,
+  serialized_start=19,
+  serialized_end=171,
+)
+
+
+_TABLEFORM = _descriptor.Descriptor(
+  name='TableForm',
+  full_name='api.TableForm',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='sex', full_name='api.TableForm.sex', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='age', full_name='api.TableForm.age', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='section', full_name='api.TableForm.section', index=2,
+      number=3, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='product', full_name='api.TableForm.product', index=3,
+      number=4, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=173,
+  serialized_end=276,
+)
+
+
+_COMPAREDATAS = _descriptor.Descriptor(
+  name='CompareDatas',
+  full_name='api.CompareDatas',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='basic', full_name='api.CompareDatas.basic', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='translated', full_name='api.CompareDatas.translated', index=1,
+      number=2, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=278,
+  serialized_end=359,
+)
+
+
+_USERINFO = _descriptor.Descriptor(
+  name='UserInfo',
+  full_name='api.UserInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='age', full_name='api.UserInfo.age', index=0,
+      number=1, type=5, cpp_type=1, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sex', full_name='api.UserInfo.sex', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='section', full_name='api.UserInfo.section', index=2,
+      number=3, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=361,
+  serialized_end=432,
 )
 
 _TABLEFORM.fields_by_name['section'].enum_type = _SECTIONTYPE
+_TABLEFORM.fields_by_name['product'].message_type = _PRODUCT
+_COMPAREDATAS.fields_by_name['basic'].message_type = _TABLEFORM
+_COMPAREDATAS.fields_by_name['translated'].message_type = _TABLEFORM
 _USERINFO.fields_by_name['section'].enum_type = _SECTIONTYPE
-DESCRIPTOR.message_types_by_name['TableForm'] = _TABLEFORM
-DESCRIPTOR.message_types_by_name['UserInfo'] = _USERINFO
 DESCRIPTOR.message_types_by_name['Product'] = _PRODUCT
+DESCRIPTOR.message_types_by_name['TableForm'] = _TABLEFORM
+DESCRIPTOR.message_types_by_name['CompareDatas'] = _COMPAREDATAS
+DESCRIPTOR.message_types_by_name['UserInfo'] = _USERINFO
 DESCRIPTOR.enum_types_by_name['SectionType'] = _SECTIONTYPE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+Product = _reflection.GeneratedProtocolMessageType('Product', (_message.Message,), {
+  'DESCRIPTOR' : _PRODUCT,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:api.Product)
+  })
+_sym_db.RegisterMessage(Product)
 
 TableForm = _reflection.GeneratedProtocolMessageType('TableForm', (_message.Message,), {
   'DESCRIPTOR' : _TABLEFORM,
@@ -347,19 +354,19 @@ TableForm = _reflection.GeneratedProtocolMessageType('TableForm', (_message.Mess
   })
 _sym_db.RegisterMessage(TableForm)
 
+CompareDatas = _reflection.GeneratedProtocolMessageType('CompareDatas', (_message.Message,), {
+  'DESCRIPTOR' : _COMPAREDATAS,
+  '__module__' : 'api_pb2'
+  # @@protoc_insertion_point(class_scope:api.CompareDatas)
+  })
+_sym_db.RegisterMessage(CompareDatas)
+
 UserInfo = _reflection.GeneratedProtocolMessageType('UserInfo', (_message.Message,), {
   'DESCRIPTOR' : _USERINFO,
   '__module__' : 'api_pb2'
   # @@protoc_insertion_point(class_scope:api.UserInfo)
   })
 _sym_db.RegisterMessage(UserInfo)
-
-Product = _reflection.GeneratedProtocolMessageType('Product', (_message.Message,), {
-  'DESCRIPTOR' : _PRODUCT,
-  '__module__' : 'api_pb2'
-  # @@protoc_insertion_point(class_scope:api.Product)
-  })
-_sym_db.RegisterMessage(Product)
 
 
 # @@protoc_insertion_point(module_scope)

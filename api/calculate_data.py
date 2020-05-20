@@ -5,18 +5,19 @@ def multi(age, sex, product_info):
     standard = table['male']['6']
     target = table[sex][age]
     ans = pb.TableForm()
+    ans.product.CopyFrom(product_info)
     ans.age = age;
     ans.sex = sex;
-    ans.kcal = round(target['kcal']/standard['kcal']* product_info.kcal)
-    ans.protein = round(target['protein']/standard['protein']* product_info.protein)
-    ans.fat = round(target['fat']/standard['fat']* product_info.fat)
-    ans.carbs = round(target['carbs']/standard['carbs']* product_info.carbs)
-    ans.sugar = round(target['sugar']/standard['sugar']* product_info.sugar)
-    ans.na = round(target['na']/standard['na']* product_info.na)
+    ans.product.kcal = round(target['kcal']/standard['kcal']* product_info.kcal)
+    ans.product.protein = round(target['protein']/standard['protein']* product_info.protein)
+    ans.product.fat = round(target['fat']/standard['fat']* product_info.fat)
+    ans.product.carbs = round(target['carbs']/standard['carbs']* product_info.carbs)
+    ans.product.sugar = round(target['sugar']/standard['sugar']* product_info.sugar)
+    ans.product.na = round(target['na']/standard['na']* product_info.na)
     if standard['chol'] == 0:
-        ans_chol = 0
+        ans.product.chol = 0
     else:
-        ans.chol = round(target['chol']/standard['chol']* product_info.chol)
+        ans.proudct.chol = round(target['chol']/standard['chol']* product_info.chol)
     return ans
 
 

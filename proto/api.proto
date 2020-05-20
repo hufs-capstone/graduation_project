@@ -16,25 +16,6 @@ enum SectionType {
     S65_74 = 11;
     S75 = 12;
 }
-message TableForm {
-    required string sex = 1;
-    required string age = 2;
-    required SectionType section = 3;
-    required float kcal = 4;
-    required float protein = 5;
-    required float fat = 6;
-    required float carbs = 7;
-    required float sugar = 8;
-    required float na = 9;
-    required float chol = 10;
-}
-
-message UserInfo {
-    required int32 age = 1;
-    required string sex = 2;
-    required SectionType section = 3;
-}
-
 message Product {
     required string name = 1;
     required int32 id = 2;
@@ -47,6 +28,20 @@ message Product {
     required float na = 9;
     required float chol = 10;
 }
+message TableForm {
+    required string sex = 1;
+    required string age = 2;
+    required SectionType section = 3;
+    required Product product = 4;
+}
+message CompareDatas {
+    required TableForm basic = 1;
+    required TableForm translated = 2;
+}
 
-
+message UserInfo {
+    required int32 age = 1;
+    required string sex = 2;
+    required SectionType section = 3;
+}
 
