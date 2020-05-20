@@ -47,9 +47,6 @@ import {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <NavLink href="/commu">커뮤니티</NavLink>
-              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
