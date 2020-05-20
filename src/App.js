@@ -12,7 +12,6 @@ import Home from './routes/Home';
 import cal1 from './routes/cal1';
 import cal2 from './routes/cal2';
 import comp from './routes/comp';
-import commu from './routes/commu';
 
 
 const App = (
@@ -28,7 +27,6 @@ const App = (
         <div>
           <Agesex />
         </div>
-      
       </Container>
       <Container>
         <Router>
@@ -38,7 +36,6 @@ const App = (
               <Route exact path = "/" component={Home}/>
               <Route path = "/cal1" component={cal1}/>
               <Route path = "/cal2" component={cal2}/>
-              <Route path = "/commu" component={commu}/>
               <Route path = "/comp" component={comp}/>
 
             </Switch>
