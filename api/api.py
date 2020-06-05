@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 import time
 import api_pb2 as pb
 from flask import Flask, request
@@ -37,16 +38,18 @@ def products(product_name):
 
 @app.route('/translate', methods=['POST'])
 def translate():
-    if request.method == 'POST':
-        body = request.get_json()
-        product_name = body['product_name']
-        age = body['age']
-        sex = body['sex']
-        product_info = mongo_api.get(product_name)
-        res = pb.CompareDatas()
-        res.basic.product.CopyFrom(product_info)
-        res.translated.CopyFrom(calculate_data.multi(age, sex, product_info))
-        return MessageToJson(res)
+	if request.method == 'POST': 
+		body = request.get_json()
+		print('-----')
+		print(body)
+		product_name = body['product_name']
+		age = body['age'] 
+		sex = body['sex'] 
+		product_info = mongo_api.get(product_name) 
+		res = pb.CompareDatas() 
+		res.basic.product.CopyFrom(product_info) 
+		res.translated.CopyFrom(calculate_data.multi(age, sex, product_info))
+		return MessageToJson(res)
 
 @app.route('/manualtranslate', methods=['POST'])
 def manualtranslate():
@@ -67,6 +70,17 @@ def manualtranslate():
         res.translated.CopyFrom(calculate_data.multi(age, sex, product_info))
 
         return MessageToJson(res)
+
+@app.route('/searchproduct', methods=['POST'])
+def searchproduct():
+	body = request.get_json()
+	query = body['query']
+	print(query)
+	start = int(body['num'])
+	print(start)
+	res = mongo_api.search(query, start)
+	
+	return MessageToJson(res)
 
 @app.route('/user_info', methods=['GET'])
 def get_user_info():
